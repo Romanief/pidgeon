@@ -4,11 +4,14 @@ import React, {useState} from 'react'
 import Container from '@/components/Container'
 
 import { useUser } from '@/context/userContext'
+import { useRouter } from 'next/navigation'
 
 function page() {
   const [inputEmail, setEmail] = useState("")
   const [inputPassword, setPassword] = useState("")
   const {user, setUser} = useUser()
+
+  const router = useRouter()
 
   const login = async (email: string, password: string) => {
     const res = await fetch("http://localhost:4000/login", {
@@ -39,6 +42,8 @@ function page() {
       email: mail,
       phone: number,
     })
+
+    router.push("/")
   }
 
   return (

@@ -4,6 +4,7 @@ import React, {useState} from 'react'
 import Container from '@/components/Container'
 
 import { useUser } from '@/context/userContext'
+import { useRouter } from 'next/navigation'
 
 function page() {
   const [inputEmail, setEmail] = useState("")
@@ -12,6 +13,8 @@ function page() {
   const [inputNumber, setNumber] = useState("")
   const [inputAddress, setAddress] = useState("")
   const {user, setUser} = useUser()
+
+  const router = useRouter()
 
   const register = async (name:string, email: string, number: string, password: string, address: string) => {
     const res = await fetch("http://localhost:4000/register", {
@@ -45,6 +48,8 @@ function page() {
       email: mail,
       phone: phone,
     })
+
+    router.push("/")
   }
 
   return (
