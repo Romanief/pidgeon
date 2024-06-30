@@ -41,7 +41,7 @@ function Post(
             </div>
           </div>
         </div>
-        <div className='bg-pPurple w-1/5 rounded-r-xl pt-5'>
+        <div className='bg-pBlue w-1/5 rounded-r-xl pt-5'>
         <IoIosArrowForward className='text-dirtWhite text-7xl'/>
         </div>
       </div>
