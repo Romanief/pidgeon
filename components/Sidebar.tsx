@@ -5,7 +5,7 @@ import Link from 'next/link'
 function Sidebar({isMenuVisible, setIsMenuVisible}: {isMenuVisible: boolean, setIsMenuVisible: (isVisible: boolean) => void}) {
   const {user, setUser} = useUser()
   return (
-    <aside className={`flex flex-col gap-3 w-full fixed p-6 top-16 bg-pSlate ${!isMenuVisible && "opacity-0"}`}>
+    <aside className={`flex flex-col gap-3 w-full fixed p-6 top-16 bg-pSlate ${!isMenuVisible && "opacity-0"} text-semibold text-lg`}>
       {user ? (
         <>
           <div>{user.name}</div>
