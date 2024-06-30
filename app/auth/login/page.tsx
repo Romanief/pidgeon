@@ -57,11 +57,11 @@ function page() {
 
           <div className='flex flex-col justify-start w-[360px] mx-auto text-start mt-10 font-bold'>
             <label>Email</label>
-            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25' type='text' value={inputEmail} onChange={(e) => setEmail(e.target.value)}/>
+            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25 p-5' type='text' value={inputEmail} onChange={(e) => setEmail(e.target.value)}/>
           </div>
           <div className='flex flex-col justify-start w-[360px] mx-auto text-start font-bold'>
             <label>Password</label>
-            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25' type='text' value={inputPassword} onChange={(e) => setPassword(e.target.value)}/>
+            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25 p-5' type='text' value={inputPassword} onChange={(e) => setPassword(e.target.value)}/>
           </div>
 
           <div 
