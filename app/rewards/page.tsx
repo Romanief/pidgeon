@@ -14,8 +14,8 @@ function page() {
       <Reward color='#5DDDD0' reward='£50' text='pre-paid card sent to your address' textColor={"#000000"}/>
       <Reward color='#86A4CA' reward='5 free coffees' text='provided by TramStore' textColor={"#F5F9FF"}/>
       <Reward color='#5DDDD0' reward='2 ice cream cones' text='provided by The Sweet Colab' textColor={"#000000"}/>
-      <Reward color='#874A97' reward='Free pint' text='provided by The Local Pub' textColor={"#F5F9FF"}/>
-      <Reward color='#86A4CA' reward='5% discount' text='provided by A Flower Shop' textColor={"#F5F9FF"}/>
+      <Reward color='#874A97' reward='Free pint' text='provided by The Clapton Hart' textColor={"#F5F9FF"}/>
+      <Reward color='#86A4CA' reward='5% discount' text='provided by Petals and Pidgeons' textColor={"#F5F9FF"}/>
       </div>
       <Footer/>
     </div>
