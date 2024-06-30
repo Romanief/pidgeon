@@ -49,7 +49,7 @@ function page() {
 
   return (
         <div className='h-screen flex flex-col justify-start text-center gap-5'>
-          <Image src="/trashgift.svg" alt='Trashgift' width={184} height={200} className='mx-auto mt-20 mb-10 text-pSlate'/>
+          <Image src="/trashgift.svg" alt='Trashgift' width={276} height={300} className='mx-auto mt-10 mb-5 text-pSlate translate-x-4'/>
           <div className='flex flex-col font-bold text-3xl'>
             <div>Welcome to</div>
             <div>StreetKeeper</div>
@@ -66,7 +66,7 @@ function page() {
 
           <div 
           onClick={()=> login(inputEmail, inputPassword)} 
-          className='bg-pTeal w-[360px] h-16 mx-auto rounded-xl text-4xl p-3 hover:bg-neutral-200 cursor-pointer mt-32 shadow-md shadow-black/25'>
+          className='bg-pTeal w-[360px] h-16 mx-auto rounded-xl text-4xl p-3 hover:bg-neutral-200 cursor-pointer mt-20 shadow-md shadow-black/25'>
             Sign in
           </div>
           <p className='-m-2'>No account? <Link href={"/auth/register"}>Register</Link></p>

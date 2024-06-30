@@ -4,6 +4,8 @@ import React, {useState} from 'react'
 
 import { useUser } from '@/context/userContext'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import { IoIosAddCircle } from "react-icons/io";
 
 function page() {
   const [inputEmail, setEmail] = useState("")
@@ -52,8 +54,12 @@ function page() {
   }
 
   return (
-        <div className='h-screen flex flex-col justify-center text-center gap-5 mt-20'>
-          <div className='flex flex-col justify-start w-[360px] mx-auto text-start mt-10 font-bold'>
+        <div className='h-screen flex flex-col justify-center text-center gap-5'>
+          <div className='relative'>
+            <IoIosAddCircle className='text-pPurple text-7xl absolute bottom-0 right-24'/>
+          <Image src="/gertrude.jpg" alt="Most awesome elderly lady ever" width={200} height={200} className='rounded-full aspect-square mx-auto shadow-md shadow-black/25' />
+          </div>
+          <div className='flex flex-col justify-start w-[360px] mx-auto text-start mt-3 font-bold'>
             <label>Name</label>
             <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25 p-5' type='text' value={inputName} onChange={(e) => setName(e.target.value)}/>
           </div>
