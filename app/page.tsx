@@ -5,6 +5,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar"
 import Image from "next/image";
 import Footer from "@/components/Footer"
+import Link from "next/link";
 
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
           />
           <div 
             className='bg-pTeal w-[360px] h-16 mx-auto rounded-xl text-4xl p-3 text-center shadow-md shadow-black/25 hover:bg-neutral-200 cursor-pointer mt-8'>
-              More
+              <Link href="/streets">More</Link>
           </div>
         </div>
     </main>
