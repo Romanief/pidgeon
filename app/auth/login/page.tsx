@@ -1,10 +1,11 @@
 "use client"
 
 import React, {useState} from 'react'
-import Container from '@/components/Container'
 
 import { useUser } from '@/context/userContext'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import Link from 'next/link'
 
 function page() {
   const [inputEmail, setEmail] = useState("")
@@ -47,14 +48,29 @@ function page() {
   }
 
   return (
-      <Container>
-        <div className='h-screen flex flex-col justify-center text-center gap-5'>
-          {user && <div>logged in as {user.name}</div>}
-          <input className='text-center border-b border-black' type='text' value={inputEmail} onChange={(e) => setEmail(e.target.value)}/>
-          <input className='text-center border-b border-black' type='text' value={inputPassword} onChange={(e) => setPassword(e.target.value)}/>
-          <div onClick={()=> login(inputEmail, inputPassword)} className=' border-black hover:bg-neutral-200 cursor-pointer'>Login</div>
+        <div className='h-screen flex flex-col justify-start text-center gap-5'>
+          <Image src="/trashgift.svg" alt='Trashgift' width={184} height={200} className='mx-auto mt-20 mb-10 text-pSlate'/>
+          <div className='flex flex-col font-bold text-3xl'>
+            <div>Welcome to</div>
+            <div>StreetKeeper</div>
+          </div>
+
+          <div className='flex flex-col justify-start w-[360px] mx-auto text-start mt-10 font-bold'>
+            <label>Email</label>
+            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25' type='text' value={inputEmail} onChange={(e) => setEmail(e.target.value)}/>
+          </div>
+          <div className='flex flex-col justify-start w-[360px] mx-auto text-start font-bold'>
+            <label>Password</label>
+            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25' type='text' value={inputPassword} onChange={(e) => setPassword(e.target.value)}/>
+          </div>
+
+          <div 
+          onClick={()=> login(inputEmail, inputPassword)} 
+          className='bg-pTeal w-[360px] h-16 mx-auto rounded-xl text-4xl p-3 hover:bg-neutral-200 cursor-pointer mt-32 shadow-md shadow-black/25'>
+            Sign in
+          </div>
+          <p className='-m-2'>No account? <Link href={"/auth/register"}>Register</Link></p>
         </div>
-      </Container>
   )
 }
 
