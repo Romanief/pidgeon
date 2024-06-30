@@ -2,10 +2,10 @@ import React from 'react'
 import { useUser } from '@/context/userContext'
 import Link from 'next/link'
 
-function Sidebar() {
+function Sidebar({isMenuVisible, setIsMenuVisible}: {isMenuVisible: boolean, setIsMenuVisible: (isVisible: boolean) => void}) {
   const {user, setUser} = useUser()
   return (
-    <aside className='flex flex-col gap-5 h-screen fixed p-10 '>
+    <aside className={`flex flex-col gap-3 w-full fixed p-6 top-16 bg-pSlate ${!isMenuVisible && "opacity-0"}`}>
       {user ? (
         <>
           <div>{user.name}</div>
