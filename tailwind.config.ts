@@ -1,3 +1,4 @@
+import { League_Spartan } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -14,7 +15,16 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        dirtyWhite: "#FAFAFA"
+        "pWhite": "#E6F0FC",
+        "pSlate": "#424564",
+        "pBlue": "#86A4CA",
+        "pPurple": "#874A97",
+        "pTeal": "#5DDDD0",
+        "dirtWhite": "#F5F9FF",
+        "shadow": "#F5F9FF"
+      },
+      fontFamily: {
+        "league" : ["League_Sparta", "Serif"]
       }
     },
   },
