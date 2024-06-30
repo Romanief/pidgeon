@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
-  @apply bg-dirtyWhite
+  @apply bg-pWhite text-pSlate font-league
 }
+
+
 
