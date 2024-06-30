@@ -1,7 +1,6 @@
 "use client"
 
 import React, {useState} from 'react'
-import Container from '@/components/Container'
 
 import { useUser } from '@/context/userContext'
 import { useRouter } from 'next/navigation'
@@ -53,17 +52,34 @@ function page() {
   }
 
   return (
-      <Container>
-        <div className='h-screen flex flex-col justify-center text-center gap-5'>
-          {user && <div>logged in as {user.name}</div>}
-          <input className='text-center border-b border-black' type='text' value={inputName} onChange={(e) => setName(e.target.value)} placeholder='Name'/>
-          <input className='text-center border-b border-black' type='text' value={inputEmail} onChange={(e) => setEmail(e.target.value)} placeholder='Email'/>
-          <input className='text-center border-b border-black' type='text' value={inputNumber} onChange={(e) => setNumber(e.target.value)} placeholder='Number'/>
-          <input className='text-center border-b border-black' type='text' value={inputAddress} onChange={(e) => setAddress(e.target.value)} placeholder='Address'/>
-          <input className='text-center border-b border-black' type='text' value={inputPassword} onChange={(e) => setPassword(e.target.value)} placeholder='password'/>
-          <div onClick={()=> register(inputName, inputEmail, inputNumber, inputPassword, inputAddress)} className=' border-black hover:bg-neutral-200 cursor-pointer'>Register</div>
+        <div className='h-screen flex flex-col justify-center text-center gap-5 mt-20'>
+          <div className='flex flex-col justify-start w-[360px] mx-auto text-start mt-10 font-bold'>
+            <label>Name</label>
+            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25 p-5' type='text' value={inputName} onChange={(e) => setName(e.target.value)}/>
+          </div>
+          <div className='flex flex-col justify-start w-[360px] mx-auto text-start font-bold'>
+            <label>Email</label>
+            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25 p-5' type='text' value={inputEmail} onChange={(e) => setEmail(e.target.value)}/>
+          </div>
+          <div className='flex flex-col justify-start w-[360px] mx-auto text-start font-bold'>
+            <label>Number</label>
+            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25 p-5' type='text' value={inputNumber} onChange={(e) => setNumber(e.target.value)}/>
+          </div>
+          <div className='flex flex-col justify-start w-[360px] mx-auto text-start font-bold'>
+            <label>Address</label>
+            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25 p-5' type='text' value={inputAddress} onChange={(e) => setAddress(e.target.value)}/>
+          </div>
+          <div className='flex flex-col justify-start w-[360px] mx-auto text-start font-bold'>
+            <label>Password</label>
+            <input className='bg-dirtWhite h-14 rounded-xl border border-pSlate shadow-md shadow-black/25 p-5' type='password' value={inputPassword} onChange={(e) => setPassword(e.target.value)}/>
+          </div>
+
+          <div 
+          onClick={()=> register(inputName, inputEmail, inputNumber, inputPassword, inputAddress)} 
+          className='bg-pTeal w-[360px] h-16 mx-auto rounded-xl text-4xl p-3 hover:bg-neutral-200 cursor-pointer mt-8 shadow-md shadow-black/25'>
+            Register
+          </div>
         </div>
-      </Container>
   )
 }
 
