@@ -15,7 +15,7 @@ export default function Home() {
         <Image src={"/street.jpeg"} alt="Street" width={360} height={48}  className="rounded-xl mx-auto mt-24 shadow-md shadow-black/25"/>
         <Footer/>
         <div className="w-[360px] mx-auto mt-5">
-          <div className="font-bold text-xl mb-2">Suggested placed to adopt</div>
+          <div className="font-bold text-xl mb-2">Suggested places to adopt</div>
           <Post 
           title="Ickburgh Road" 
           description="200m of road"
