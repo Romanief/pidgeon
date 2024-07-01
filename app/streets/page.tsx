@@ -7,6 +7,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 
 import { FaCheckCircle } from "react-icons/fa";
+import Link from 'next/link'
 
 function page() {
   const [showDialog, setShowDialog] = useState(false)
@@ -20,7 +21,7 @@ function page() {
         <div className='font-semibold'>July 1</div>
         <div className='flex justify-around'>
           <div onClick={() => {setShowDialog(false)}} className='bg-pTeal h-12 p-2 mx-auto rounded-xl hover:bg-neutral-200 cursor-pointer '>Cancel</div>
-          <div onClick={() => {setShowDialog(false)}} className='bg-pTeal h-12 p-2 mx-auto rounded-xl hover:bg-neutral-200 cursor-pointer '>Confirm</div>
+          <Link onClick={() => {setShowDialog(false)}} className='bg-pTeal h-12 p-2 mx-auto rounded-xl hover:bg-neutral-200 cursor-pointer ' href="/adoption">Confirm</Link>
         </div>
       </div>
     </div>
